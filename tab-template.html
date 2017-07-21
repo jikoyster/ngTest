@@ -1,0 +1,51 @@
+<div class="container">
+	<ul class="nav nav-pills list-inline">
+		<li ng-class="{active:tab.isSet(1)}">
+			<a href="#"
+				data-toggle='tooltip' title="tab one"
+			 ng-click="tab.setCurrentTab(1)">One</a>
+		</li>
+		<li ng-class="{active:tab.isSet(2)}">
+			<a href="#" ng-click="tab.setCurrentTab(2)">Two</a>
+		</li>
+		<li ng-class="{active:tab.isSet(3)}">
+			<a href="#" ng-click="tab.setCurrentTab(3)">Three</a>
+		</li>
+	</ul>
+	<br>
+	<div class="jumbotron tab-content">
+		
+		<div class="container" ng-class="tab.isSet(1) ? 'show': 'hidden' ">
+			<div class="col-xs-2"></div>
+			<div class="col-xs-8"><col-one></col-one></div>
+			<div class="col-xs-2"></div>
+		</div>
+
+		<div class="container" ng-class="tab.isSet(2) ? 'show': 'hidden' ">
+			2222222222222222
+		</div>
+
+		<div class="container" ng-class="tab.isSet(3) ? 'show': 'hidden' ">
+			33333333333333
+		</div>
+
+	</div>
+
+	<div class="text-right col-xs-2">
+		<col-one class="text-warning"></col-one>
+		<div class="btn btn-warning">col1</div>
+	</div>
+	<div class="col-xs-7">
+		<col-two class="text-primary"></col-two>	
+	</div>
+	<div class="text-left col-xs-3">
+		<col-three></col-three>
+	</div>
+</div>
+
+
+<script>
+	$(document).ready(function(){
+		$('[data-toggle="tooltip"]').tooltip();
+	});
+</script>

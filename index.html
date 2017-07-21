@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Angular Test</title>
+
+	<!-- glyphicons not working 
+		<link href="bootstrap.min.css" rel="stylesheet"> -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>	
+
+	<script type="text/javascript" src="angular.min.js"></script>
+
+	<script type="text/javascript" src="app.js"></script>
+</head>
+<body ng-app="person">
+	<br>
+<div id="pagewrapper">
+
+	<div class="container">
+		<div class="jumbotron">
+			<div class="text-right">
+				<a href="#" data-toggle="tooltip" data-placement="left" title="close">
+					<i class="glyphicon glyphicon-remove-circle"></i>
+				</a>
+			</div>
+			<div class="col-md-6"><col-one></col-one></div>
+			<div class="col-md-6"><col-three></col-three></div>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+
+	<tab-container></tab-container>
+</div><!-- pagewrapper -->
+
+<script>
+	$(document).ready(function(){
+		$('[data-toggle="tooltip"]').tooltip();
+	});
+</script>
+</body>
+</html>
